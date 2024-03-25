@@ -1,0 +1,302 @@
+/* Dashboard.css */
+
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .dashboard-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .user-info {
+    margin-bottom: 20px;
+  }
+  
+  .user-info p {
+    margin: 5px 0;
+  }
+  
+  /* .places-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .place-item {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+   */
+
+   .places-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+  }
+  
+  .place-item {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    flex: 1 0 200px; /* Adjust the width of each item */
+    max-width: 300px; /* Limit the maximum width of each item */
+  }
+  
+  .place-item h4 {
+    margin: 0;
+  }
+  
+  .place-item p {
+    margin: 5px 0;
+  }
+  
+  .booking-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .booking-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .bookings-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .booking-item {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .booking-item p {
+    margin: 5px 0;
+  }
+  .logout-button {
+    position: fixed; /* Or absolute, depending on your layout */
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #f44336; /* Red color for logout button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+  .logout-button:hover {
+    background-color: #d32f2f; /* Darker shade on hover */
+  }
+
+  .places-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row */
+    gap: 20px; /* Adjust the gap between cards as needed */
+    justify-content: center; /* Center the cards within the container */
+  }
+  
+  .places-list li {
+    flex: 1; /* Each item can grow */
+    min-width: 250px; /* Minimum width of each item, adjust as needed */
+    max-width: 250px; /* Maximum width of each item, adjust as needed */
+    list-style: none; /* Remove default list styling */
+  }
+  
+  
+  .places-list li div {
+    width: 100%; /* Ensure the content takes up the full width */
+    padding: 1rem; /* Add padding around each card */
+    background: linear-gradient(1deg, #760340 0%, #302663 59.17%, #206A7C 100%);    
+        border-radius: 0.5rem; /* Rounded corners for each card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect for each card */
+  }
+  
+  
+  .places-list li div figure img {
+    width: 100%; /* Ensure the image covers the figure element */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the figure area without stretching */
+  }
+  
+  .places-list li div h2 {
+    margin: 0.5rem 0; /* Adjust title margin */
+    font-size: 1.25rem; /* Adjust font size */
+    font-weight: bold; /* Adjust font weight */
+    color: rgb(255, 255, 255);
+  }
+  
+  .places-list li div p {
+    margin: 0.25rem 0; /* Adjust paragraph margin */
+  }
+  
+  .places-list li div .card-actions {
+    display: flex;
+    justify-content: flex-end; /* Align button to the end */
+  }
+  
+  .places-list li div button {
+    background-color: #bd6a9d; /* Primary blue */
+    color: white; /* Text color */
+    padding: 0.5rem 1rem; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 0.25rem; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .places-list li div button:hover {
+    background-color: #191550;  /* Darker shade on hover */
+  }
+  
+  .dash{
+  color: rgb(255, 255, 255);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+
+  }
+  .card {
+  max-width: 290px; /* w-96 equivalent to 24rem or 384px */
+  background-color: #f9fafb; /* bg-base-100 equivalent */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl equivalent */
+  border-radius: 0.5rem; /* Optional: if you want rounded corners */
+  overflow: hidden; /* Ensures the content respects border-radius */
+  left: 110px;
+  top: 20px;
+margin-bottom: 55px;
+}
+
+
+.card figure img {
+  width: 100%; /* Ensure the image covers the figure element */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the figure area without stretching */
+}
+
+.card-body {
+  padding: 1rem; /* Adjust padding as needed */
+  display: flex; /* Apply Flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children vertically in the container */
+  align-items: center; /* Center children horizontally in the container */
+}
+
+.card-title {
+  margin: 0.5rem 0; /* Adjust title margin */
+  font-size: 1.25rem; /* Adjust font size */
+  font-weight: bold; /* Adjust font weight */
+  text-align: center; /* Ensure the title is centered */
+}
+
+.card-actions {
+  display: flex; /* Apply Flexbox */
+  justify-content: flex-end; /* Aligns button to the end */
+  padding: 1rem 0; /* Adjust padding as needed */
+  width: 100%; /* Ensure the actions take up the full width of the card-body */
+}
+
+#place{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #3b82f6; /* Primary blue */
+  color: white; /* Text color */
+  padding: 0.5rem 1rem; /* Padding around the text */
+  border: none; /* No border */
+  border-radius: 0.25rem; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-primary:hover {
+  background-color: #2563eb; /* Darker shade on hover */
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.welcome-profile-container {
+  position: relative; /* Ensure the dropdown menu is positioned relative to this container */
+  display: inline-block; /* Keep the welcome message and profile icon in line */
+}
+
+.welcome-text {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.profile-icon {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  background-color:rgb(2,0,36); /* Adjust transparency for a clearer effect */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Adjust border transparency */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+  display: none; /* Initially hide the dropdown menu */
+ 
+}
+
+/* Show dropdown menu when it's active */
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-menu button {
+  width: 90%; /* Set a fixed width for all dropdown buttons */
+}
+
+/* own-menu button {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: #bd6a9d; 
+  border: none;
+  cursor: pointer;
+} */
+
+#butt{
+    position: absolute;
+    top: -29px;
+    left: 0;
+ 
+}
+
+#butt:hover{
+background-color: #333;
+
+}
+
+
+#buttt{
+margin-top: 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .logo{
+  
+    visibility: hidden;
+    
+  
+  }
+}

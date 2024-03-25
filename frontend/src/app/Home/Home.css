@@ -1,0 +1,106 @@
+/* Home.css */
+.home {
+  background-color: #04021e;
+  position: relative;
+  width: 100%; /* Ensure the home container fills the viewport width */
+}
+
+.showcase {
+  position: fixed; /* Changed from absolute to fixed for full viewport adjustment */
+  left: 0; /* Ensure it starts from the left edge */
+  width: 100%; /* Start with full width */
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(2,0,36);
+  background: linear-gradient(194deg, rgba(2,0,36,1) 33%, rgb(8, 104, 128) 100%, rgb(9, 105, 125) 100%);
+  transition: 0.5s;
+  z-index: 1; /* Adjust z-index if necessary */
+}
+
+/* Assuming the parent of .logo has a relative or absolute positioning */
+/* If not, you might need to adjust the parent container as well */
+
+#data{
+  position: absolute; /* Position the logo absolutely within its positioned parent */
+  top: 0; /* Align to the top of the parent container */
+  left: 0; /* Align to the left of the parent container */
+  padding: 20px; /* Add some padding to move it slightly from the edges */
+  z-index: 10; /* Ensure it's above other content if necessary */
+  text-decoration: none;
+  color: #bd6a9d;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.showcase.active {
+  width: calc(100% - 300px); /* Adjust width when form is active */
+  padding-right: 300px; /* Add padding to prevent content from being hidden behind the form */
+}
+
+/* Adjustments for form containers */
+.login-form-container,
+.register-form-container {
+  position: fixed; /* Use fixed to position relative to the viewport */
+  top: 0;
+  right: 0; /* Align to the right edge */
+  width: 300px; /* Maintain form width */
+  height: 100%;
+  background-color: #04021e; /* Ensure dark background color */
+  z-index: 2; /* Ensure forms appear above the .showcase content */
+  padding: 20px;
+  transition: transform 0.5s, background-color 0s; /* Add background-color transition */
+  transform: translateX(100%); /* Hide offscreen initially */
+}
+
+.login-container {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #333; /* Adjust color as needed */
+}
+
+
+
+  #buttt{
+  margin-top: 5px;
+  background-color: #bd6a9d;
+
+  }
+.animate__slideInLeft {
+  transform: translateX(0); /* Slide in to show the form */
+}
+
+
+@media (max-width: 991px) {
+  .showcase,
+  .showcase header {
+    padding: 12px;
+  }
+  .text h2 {
+    font-size: 3em;
+  }
+  .text h3{
+    font-size: 2em;
+    color: white;
+  }
+
+  
+  .showcase.active {
+    width: 100%; /* Use full width on smaller screens */
+    padding-right: 0; /* Remove padding-right on active for smaller screens */
+  }
+
+  .login-form-container,
+  .register-form-container {
+  width: 100%; 
+  }
+}
